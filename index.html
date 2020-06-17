@@ -1,66 +1,112 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+<!-- TitleImage.jpg https://i2.wp.com/www.kingtumblr.com/wp-content/uploads/2018/05/Amazing-Mountain-Bike-Stunts-6.jpg -->
+<!-- TitleImage2.jpg https://www.queenstownnz.co.nz/stories/post/mountain-biking-for-pros/ -->
+<!-- AddressImage.jpg https://www.pinterest.ca/pin/195695546284360463/ -->
+<!-- black_square.jpg https://www.fg-a.com/black-backgrounds.shtml -->
+<!-- AddressImage3.png https://www.pinterest.ca/pin/131448882851851507/ -->
+<!-- maintence.png https://www.menifeebicycles.com/articles/bike-maintenance-guidelines-pg119.htm -->
+<!-- breakrepair.pgn https://ae01.alicdn.com/kf/HTB1FqmIk_qWBKNjSZFxq6ApLpXaI.jpg_q50.jpg -->
+<!-- puncture.png https://www.aliexpress.com/i/32896550894.html -->
+<!-- StaffPhoto.pgn https://www.northparkbikeshop.com/staff -->
+<!-- AddressImage4 https://www.singletracks.com/uncategorized/good-shop-bad-shop-what-makes-or-breaks-an-lbs-part-1/attachment/peak-bike-shop/ -->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
 <head>
-	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
-	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Module 4 - Labo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
-<div>
-    <h1>Al's Groceries</h1>
-</div>
-
-<!-- Tab links, each one with an onclick event associated with it -->
-<div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
-</div>
-
-<!-- Tab content -->
-<div id="Client" class="tabcontent">
-  <h3>Client Information</h3>
-  <p>Tell us a bit about you.</p>
-  <p>Choose a Category:</p>
-	<!-- <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')" multiple>
-	<option value="Vegetarian">Vegetarian</option>
-    <option value="GlutenFree">Gluten Free</option>
-    <option value="OrganicOnly">Organic Only</option>
-    <option value="None">None</option>
-    </select> -->
-    <input type="checkbox" id="dietSelect" name="dietSelect" value="Vegetarian">
-    <label for="dietSelect">Vegetarian</label><br>
-    <input type="checkbox" id="dietSelect" name="dietSelect" value="GlutenFree">
-    <label for="dietSelect">Gluten Free</label><br>
-    <input type="checkbox" id="dietSelect" name="dietSelect" value="OrganicOnly">
-    <label for="dietSelect">Organic Only</label><br>
-    <input type="checkbox" id="dietSelect" name="dietSelect" value="None">
-    <label for="dietSelect">None</label><br>
-    <button onclick="populateListProductChoices('displayProduct')">Submit</button>
-</div>
-
-<div id="Products" class="tabcontent">
-  <h3>Your targeted products</h3>
-  <p>We preselected products based on your restrictions.</p>
-	 Choose items to buy:
-	 <div id="displayProduct"></div>
-	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add selected items to cart.
-	</button>
-</div>
-
-<div id="Cart" class="tabcontent">
-  <h3>Cart</h3>
-  <p>Here is your cart.</p>
-  <div id="displayCart"></div>
-</div>
-<footer>
-    <p>Author: Beatrice Johnston</p>
-    <p>Student Number: 8198979</p>
-  </footer>
-
-<script src="scripts/groceries.js"></script>
-<script src="scripts/main.js"></script>
-
+    <div class="HeaderDiv">
+        <h1>Al's Bikes</h1>
+        <img src="images/logo.jpg" alt="logo" class="logo">
+    </div>
+    <div class="TitleContainer">
+        <img src="images/TitleImage2.jpg" alt="Mountain Biker Jumping" class="TitleImage">
+        <h3 class="TitleImageText">"Adventure Starts Here."</h3>
+        <h6 class="TitleImageAuthor">-Al Murray, Owner</h6>
+    </div>
+    <div class="TitleContainer">
+        <img src="images/AddressImage4.jpg" alt="Inside bike shop" class="AddressImage">
+        <div class="AddressDiv">
+            <h3 class="AlsBikes">Al's Bikes</h3>
+            <h6 class="TagLine">Ottawa's Oldest Bike Shop</h6>
+            <h3 class="Address">85 King Edward St.</h3>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <img src="images/breakrepair.jpg" alt="break repair" class="CircleImg">
+            <h3>Break Repair</h3>
+            <h6>65$</h6>
+            <button type="button" class="btn btn-dark">Book Now!</button>
+          </div>
+          <div class="col-sm">
+            <img src="images/puncture.jpg" alt="puncture" class="CircleImg">
+            <h3>Puncture Repair</h3>
+            <h6>20$</h6>
+            <button type="button" class="btn btn-dark">Book Now!</button>
+          </div>
+          <div class="col-sm">
+            <img src="images/maintance.jpg" alt="maintence" class="CircleImg">
+            <h3>Maintenance</h3>
+            <h6>99$</h6>
+            <button type="button" class="btn btn-dark">Book Now!</button>
+          </div>
+        </div>
+    </div>
+    <div class="StaffPicture">
+        <img src="images/StaffPhoto.jpg" alt="Staff picture" class="StaffImage">
+        <div class="StaffDiv">
+            <h3>The Al's Bikes team</h3>
+            <h6 class="staffText">Al's Bikes wouldn't work without our amazing staff! We couldn't ask for a better bike-family!</h6>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <h6 class="TitleFooter">Al's Bikes</h6>
+                <p class="FooterText">85 King Edward St.</p>
+                <p class="FooterText">613.934.2309</p>
+                <h6 class="TitleFooter">Hours of Operation</h6>
+                <p class="FooterText">Monday-Friday 10am-8pm</p>
+                <p class="FooterText">Saturday 10am-6pm</p>
+                <p class="FooterText">Sunday 1pm-9pm</p>
+              </div>
+              <div class="col-sm">
+                <h6 class="TitleFooter">Contact Us</h6>
+                <!-- Input from https://getbootstrap.com/docs/4.0/components/forms/ -->
+                <input class="form-control" placeholder="Your name">
+                <input class="form-control"  placeholder="Your Email">
+                <input class="form-control" placeholder="Subject">
+                <textarea class="form-control" rows="3" placeholder="Your message"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
 </body>
 </html>
